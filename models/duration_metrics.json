@@ -1,0 +1,32 @@
+{
+  "model_name": "Case Duration Predictor (Linear Regression)",
+  "algorithm": "LinearRegression",
+  "train_samples": 5902,
+  "test_samples": 1476,
+  "mae_days": 364.67,
+  "mse": 200949.37,
+  "rmse_days": 448.27,
+  "r2_score": 0.4284,
+  "intercept": 310.41,
+  "coefficients": {
+    "cat__case_type_Bail Matter": -686.13,
+    "cat__case_type_Civil Appeal - General": 459.76,
+    "cat__case_type_Civil Appeal - Property": 703.8,
+    "cat__case_type_Company / Commercial": 445.09,
+    "cat__case_type_Constitutional / Writ Petition": -230.54,
+    "cat__case_type_Criminal Appeal": 108.14,
+    "cat__case_type_Election Petition": -525.06,
+    "cat__case_type_Habeas Corpus / Preventive Detention": -662.51,
+    "cat__case_type_Income Tax / Revenue": 413.59,
+    "cat__case_type_Labour / Industrial Dispute": -26.14,
+    "num__num_hearings_simulated": 1.39,
+    "num__bench_size": 7.42,
+    "num__case_year": 0.2
+  },
+  "limitations": [
+    "Linear Regression assumes a strictly linear, additive relationship between case characteristics and duration.",
+    "Actual court litigation often suffers from heavy right-skew, non-linear adjournment delays, and multi-year systemic bottlenecks.",
+    "Predictions below zero are unphysical for court duration and are safely floored at minimum baseline (14 days).",
+    "Homoscedasticity assumption is violated as variance in duration widens significantly for protracted civil/property disputes."
+  ]
+}

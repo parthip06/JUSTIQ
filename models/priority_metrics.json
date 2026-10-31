@@ -1,0 +1,87 @@
+{
+  "model_name": "Decision Tree Priority Classifier",
+  "algorithm": "DecisionTreeClassifier",
+  "hyperparameters": {
+    "max_depth": 5,
+    "min_samples_leaf": 15,
+    "random_state": 42
+  },
+  "classes": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "test_size": 0.2,
+  "train_samples": 5902,
+  "test_samples": 1476,
+  "accuracy": 0.5962,
+  "precision": 0.6008,
+  "recall": 0.5962,
+  "f1_score": 0.5799,
+  "confusion_matrix": [
+    [
+      38,
+      34,
+      126
+    ],
+    [
+      3,
+      486,
+      177
+    ],
+    [
+      17,
+      239,
+      356
+    ]
+  ],
+  "classification_report": {
+    "High": {
+      "precision": 0.6551724137931034,
+      "recall": 0.1919191919191919,
+      "f1-score": 0.296875,
+      "support": 198.0
+    },
+    "Low": {
+      "precision": 0.6403162055335968,
+      "recall": 0.7297297297297297,
+      "f1-score": 0.6821052631578948,
+      "support": 666.0
+    },
+    "Medium": {
+      "precision": 0.5402124430955993,
+      "recall": 0.5816993464052288,
+      "f1-score": 0.5601888276947286,
+      "support": 612.0
+    },
+    "accuracy": 0.5962059620596206,
+    "macro avg": {
+      "precision": 0.6119003541407665,
+      "recall": 0.5011160893513834,
+      "f1-score": 0.5130563636175411,
+      "support": 1476.0
+    },
+    "weighted avg": {
+      "precision": 0.6008026734355804,
+      "recall": 0.5962059620596206,
+      "f1-score": 0.5798773155910106,
+      "support": 1476.0
+    }
+  },
+  "feature_importances": {
+    "cat__case_type_Constitutional / Writ Petition": 0.30263141120391523,
+    "cat__case_type_Habeas Corpus / Preventive Detention": 0.2631721108037746,
+    "cat__case_type_Criminal Appeal": 0.2483612071271557,
+    "cat__case_type_Election Petition": 0.07550130507651838,
+    "num__case_age_days": 0.04706820445919844,
+    "cat__case_type_Labour / Industrial Dispute": 0.03779188869293137,
+    "num__num_hearings_simulated": 0.009989211759270332,
+    "num__bench_size": 0.008830981659694325,
+    "num__case_year": 0.00665367921754162,
+    "cat__case_type_Bail Matter": 0.0,
+    "cat__case_type_Civil Appeal - General": 0.0,
+    "cat__case_type_Civil Appeal - Property": 0.0,
+    "cat__case_type_Company / Commercial": 0.0,
+    "cat__case_type_Income Tax / Revenue": 0.0
+  }
+}
